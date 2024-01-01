@@ -3,7 +3,7 @@
       {
         "source": "/user",
         "headers": [
-          { "key": "Access-Control-Allow-Origin", "value": "http://localhost:300" }
+          { "key": "Access-Control-OriginAllow-", "value": "http://localhost:3000" }
         ]
       }
     ],

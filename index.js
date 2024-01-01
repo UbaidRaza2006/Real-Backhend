@@ -5,7 +5,7 @@ const cors = require('cors');
 const dotenv = require("dotenv");
 const userSchema = require("./Model/user.js")
 const cloudinary = require('cloudinary').v2;
-const port = 300
+const port = 3000
 const app = express()
 dotenv.config()
 const userRoutes = require('./routes/user.js')
