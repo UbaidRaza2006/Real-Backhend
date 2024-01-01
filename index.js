@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 const express = require("express");
+const cors = require('cors'); 
+// importing cors
 const dotenv = require("dotenv");
 const userSchema = require("./Model/user.js")
 const cloudinary = require('cloudinary').v2;
@@ -8,6 +10,19 @@ const app = express()
 dotenv.config()
 const userRoutes = require('./routes/user.js')
 const attendenceRoutes = require('./routes/attendence.js')
+
+
+// CORS Configuration
+const corsOptions = {
+    origin: 'http://localhost:3000',  // Allow specific origin
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,                 // Allow cookies
+    optionsSuccessStatus: 204          // Return 204 status for preflight requests
+  };
+  
+  app.use(cors(corsOptions));
+
+
 
 
 mongoose.connect(process.env.MONGO_URL, {

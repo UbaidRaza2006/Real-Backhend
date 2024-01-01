@@ -1,4 +1,13 @@
 { 
+   "headers": [
+      {
+        "source": "/user",
+        "headers": [
+          { "key": "Access-Control-Allow-Origin", "value": "http://localhost:300" }
+        ]
+      }
+    ],
+ 
      "version": 2, 
      "name": "Backhend of Attendence", 
      "builds": [ 
